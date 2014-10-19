@@ -1,11 +1,24 @@
-;; ¥Æ¡¼¥Ş¤ò»È¤¦
+;; ãƒ•ãƒ¬ãƒ¼ãƒ ã®è¨­å®š
+(setq default-frame-alist
+      (append
+       (list
+        ;; ã‚µã‚¤ã‚ºãƒ»ä½ç½®
+        '(width . 136) ; æ¨ªå¹…(æ–‡å­—æ•°)
+        '(height . 71) ; é«˜ã•(è¡Œæ•°)
+        '(top . 20) ; ãƒ•ãƒ¬ãƒ¼ãƒ å·¦ä¸Šè§’ y åº§æ¨™
+        '(left . 0) ; ãƒ•ãƒ¬ãƒ¼ãƒ å·¦ä¸Šè§’ x åº§æ¨™
+        )
+       default-frame-alist)
+      )
+
+;; ãƒ†ãƒ¼ãƒã‚’ä½¿ã†
 (require 'color-theme-solarized)
 (load-theme 'solarized-dark t)
 
 ;; font-lock use-all
 (global-font-lock-mode t)
 
-;; ¥«¡¼¥½¥ë¤¬¤¢¤ë¹Ô¤ò¶¯Ä´É½¼¨
+;; ã‚«ãƒ¼ã‚½ãƒ«ãŒã‚ã‚‹è¡Œã‚’å¼·èª¿è¡¨ç¤º
 (defface hlline-face
   '((((class color)
       (background dark))
@@ -19,34 +32,34 @@
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
-;; ¥ê¡¼¥¸¥ç¥ó¤Ë¿§¤ò¤Ä¤±¤ë
+;; ãƒªãƒ¼ã‚¸ãƒ§ãƒ³ã«è‰²ã‚’ã¤ã‘ã‚‹
 (setq transient-mark-mode t)
 
-;; ¥¿¥¤¥È¥ë¥Ğ¡¼¤Ë¥Õ¥ë¥Ñ¥¹¤òÉ½¼¨
+;; ã‚¿ã‚¤ãƒˆãƒ«ãƒãƒ¼ã«ãƒ•ãƒ«ãƒ‘ã‚¹ã‚’è¡¨ç¤º
 (setq frame-title-format "%f")
 
-;; ¹ÔÈÖ¹æ¤òÉ½¼¨
+;; è¡Œç•ªå·ã‚’è¡¨ç¤º
 (require 'linum)
 (global-linum-mode t)
 (set-face-font 'mode-line "Migu 1M-12")
 (setq linum-format "%3d")
 
-;; ²èÌÌ¾å¤Ë½Ğ¤ë¥á¥Ë¥å¡¼(yÊ¸»ú)¤ò¾Ã¤¹
+;; ç”»é¢ä¸Šã«å‡ºã‚‹ãƒ¡ãƒ‹ãƒ¥ãƒ¼(yæ–‡å­—)ã‚’æ¶ˆã™
 (menu-bar-mode -1)
 
-;; ²èÌÌ²£¤Ë½Ğ¤ë¥¹¥¯¥í¡¼¥ë¥Ğ¡¼¤ò¾Ã¤¹
+;; ç”»é¢æ¨ªã«å‡ºã‚‹ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ãƒãƒ¼ã‚’æ¶ˆã™
 (scroll-bar-mode -1)
 
-;; ²èÌÌ¾å¤Ë½Ğ¤ë¥Ä¡¼¥ë¥Ğ¡¼(¥¢¥¤¥³¥ó²èÁü)¤ò¾Ã¤¹
+;; ç”»é¢ä¸Šã«å‡ºã‚‹ãƒ„ãƒ¼ãƒ«ãƒãƒ¼(ã‚¢ã‚¤ã‚³ãƒ³ç”»åƒ)ã‚’æ¶ˆã™
 (tool-bar-mode -1)
 
-;; Èóactive window¤Ë¤Ï¥«¡¼¥½¥ë¤òÉ½¼¨¤·¤Ê¤¤
+;; éactive windowã«ã¯ã‚«ãƒ¼ã‚½ãƒ«ã‚’è¡¨ç¤ºã—ãªã„
 (setq cursor-in-non-selected-windows nil)
 
-;; ÁªÂò¤·¤¿¤È¤­¿§¤¬¤Ä¤¯¤è¤¦¤Ë¤¹¤ë
+;; é¸æŠã—ãŸã¨ãè‰²ãŒã¤ãã‚ˆã†ã«ã™ã‚‹
 (transient-mark-mode t)
 
-;; ¥¿¥Ö¤ÈÁ´³Ñ¥¹¥Ú¡¼¥¹¤òÉ½¼¨¤¹¤ë
+;; ã‚¿ãƒ–ã¨å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’è¡¨ç¤ºã™ã‚‹
 (defface my-face-b-1 '((t (:background "gray15"))) nil)
 (defface my-face-b-2 '((t (:background "gray26"))) nil)
 (defface my-face-u-1 '((t (:foreground "SteelBlue" :underline t))) nil)
@@ -57,12 +70,12 @@
 (font-lock-add-keywords
 major-mode
 '(("\t" 0 my-face-b-2 append)
-("¡¡" 0 my-face-b-1 append)
+("ã€€" 0 my-face-b-1 append)
 ("[ \t]+$" 0 my-face-u-1 append)
 )))
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 
-;; ¥¹¥×¥é¥Ã¥·¥å²èÌÌ¤ò½Ğ¤µ¤Ê¤¤
+;; ã‚¹ãƒ—ãƒ©ãƒƒã‚·ãƒ¥ç”»é¢ã‚’å‡ºã•ãªã„
 (setq inhibit-startup-message t)
 (buffer-menu)
