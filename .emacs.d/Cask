@@ -22,7 +22,7 @@
 (depends-on "json-mode")
 (depends-on "less-css-mode")
 (depends-on "rhtml-mode")
-
+(depends-on "yaml-mode")
 (depends-on "sass-mode")
 
 ;; for ruby modes
