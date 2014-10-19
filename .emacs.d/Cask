@@ -1,0 +1,31 @@
+(source gnu)
+(source melpa)
+(source marmalade)
+
+(depends-on "init-loader")
+(depends-on "anything")
+(depends-on "auto-complete")
+
+;; DDとか打つとData::Dumperに変わる便利な奴
+(depends-on "smartchr" :git "https://github.com/imakado/emacs-smartchr.git")
+
+;; 見た目
+(depends-on "color-theme")
+(depends-on "color-theme-solarized")
+(depends-on "powerline")
+
+;; prog modes
+(depends-on "coffee-mode")
+(depends-on "go-mode")
+(depends-on "js2-mode")
+(depends-on "json-mode")
+(depends-on "less-css-mode")
+(depends-on "rhtml-mode")
+
+(depends-on "sass-mode")
+
+;; for ruby modes
+(depends-on "ruby-mode")
+(depends-on "ruby-block")
+(depends-on "ruby-electric")
+(depends-on "ruby-end")
