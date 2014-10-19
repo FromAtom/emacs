@@ -5,6 +5,7 @@
 (depends-on "init-loader")
 (depends-on "anything")
 (depends-on "auto-complete")
+(depends-on "popwin")
 
 ;; DDとか打つとData::Dumperに変わる便利な奴
 (depends-on "smartchr" :git "https://github.com/imakado/emacs-smartchr.git")

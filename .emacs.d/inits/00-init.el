@@ -35,8 +35,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;;; Autosaveファイルの場所指定
-;;(setq auto-save-list-file-prefix (expand-file-name "~/.emacs.d/.autosave/"))
-;;オートセーブファイルを作らない
+;; (setq auto-save-list-file-prefix (expand-file-name "~/.emacs.d/.autosave/"))
+;; オートセーブファイルを作らない
 (setq auto-save-default nil)
 
 ;; Backup fileの場所指定
@@ -45,30 +45,34 @@
       (cons (cons "\\.*$" (expand-file-name "~/.emacs.d/.backup"))
             backup-directory-alist))
 
-;;; スクロールを一行ずつにする
+;;同名ファイルのバッファ名の識別文字列を変更
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+;; スクロールを一行ずつにする
 (setq scroll-step 1)
 '(setq scroll-conservatively 35
       scroll-margin 0
       scroll-step 1)
 
-;;; 行の先頭でC-kを一回押すだけで行全体を消去する
+;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
 
 ;;タブの代わりに半角スペースを使う
 (setq-default tab-width 4 indent-tabs-mode nil)
 
-;;;GCを減らして軽くする
+;; GCを減らして軽くする
 (setq gc-cons-threshold (* 10 gc-cons-threshold))
 
-;;ログの記録行数を増やす
+;; ログの記録行数を増やす
 (setq message-log-max 10000)
 
-;;;サーバ起動
+;; サーバ起動
 (require 'server)
 (unless (server-running-p)
   (server-start))
 
-;;;クライアントを終了するとき終了するかどうかを聞かない
+;; クライアントを終了するとき終了するかどうかを聞かない
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
 ;;自動再読み込み
@@ -101,5 +105,5 @@
 (cua-mode t)
 (setq cua-enable-cua-key nil)
 
-;;保存時に行末のスペースを削除
+;; 保存時に行末のスペースを削除
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
