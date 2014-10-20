@@ -6,6 +6,7 @@
 (depends-on "anything")
 (depends-on "auto-complete")
 (depends-on "popwin")
+(depends-on "helm")
 
 ;; DDとか打つとData::Dumperに変わる便利な奴
 (depends-on "smartchr" :git "https://github.com/imakado/emacs-smartchr.git")
@@ -24,9 +25,9 @@
 (depends-on "rhtml-mode")
 (depends-on "yaml-mode")
 (depends-on "sass-mode")
+(depends-on "ruby-mode")
 
 ;; for ruby modes
-(depends-on "ruby-mode")
 (depends-on "ruby-block")
 (depends-on "ruby-electric")
 (depends-on "ruby-end")
