@@ -107,3 +107,10 @@
 
 ;; 保存時に行末のスペースを削除
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; コピペ時にテキスト属性（色情報など）は保存しない
+;; http://www-tsujii.is.s.u-tokyo.ac.jp/~yoshinag/tips/elisp_tips.html#yankoff
+(defadvice kill-new (around my-kill-ring-disable-text-property activate)
+  (let ((new (ad-get-arg 0)))
+    (set-text-properties 0 (length new) nil new)
+    ad-do-it))

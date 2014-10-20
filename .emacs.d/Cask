@@ -6,7 +6,9 @@
 (depends-on "anything")
 (depends-on "auto-complete")
 (depends-on "popwin")
-(depends-on "helm")
+
+;; Git関係
+(depends-on "git-gutter-fringe")
 
 ;; DDとか打つとData::Dumperに変わる便利な奴
 (depends-on "smartchr" :git "https://github.com/imakado/emacs-smartchr.git")
