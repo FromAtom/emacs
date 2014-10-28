@@ -4,7 +4,7 @@
        (list
         ;; サイズ・位置
         '(width . 136) ; 横幅(文字数)
-        '(height . 71) ; 高さ(行数)
+        '(height . 68) ; 高さ(行数)
         '(top . 20) ; フレーム左上角 y 座標
         '(left . 0) ; フレーム左上角 x 座標
         )
@@ -20,6 +20,14 @@
 
 ;; カーソルがある行を強調表示
 (global-hl-line-mode t)
+
+;; 対応する括弧のハイライト
+(show-paren-mode t)
+(setq show-paren-delay 0)
+(setq show-paren-style 'expression)
+(set-face-attribute 'show-paren-match-face nil
+                    :background nil :foreground nil
+                    :underline t)
 
 ;; リージョンに色をつける
 (setq transient-mark-mode t)
