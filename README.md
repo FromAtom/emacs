@@ -1,0 +1,5 @@
+# emacs.d
+
+```
+$ cask install
+```
