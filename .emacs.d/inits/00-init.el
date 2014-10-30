@@ -50,10 +50,8 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;; スクロールを一行ずつにする
+(setq mac-mouse-wheel-smooth-scroll t)
 (setq scroll-step 1)
-'(setq scroll-conservatively 35
-      scroll-margin 0
-      scroll-step 1)
 
 ;; 行の先頭でC-kを一回押すだけで行全体を消去する
 (setq kill-whole-line t)
