@@ -7,13 +7,13 @@
 (depends-on "auto-complete")
 (depends-on "popwin")
 
-;; Git´Ø·¸
+;; Gité–¢ä¿‚
 (depends-on "git-gutter-fringe")
 
-;; DD¤È¤«ÂÇ¤Ä¤ÈData::Dumper¤ËÊÑ¤ï¤ëÊØÍø¤ÊÅÛ
+;; perlã§Dumperã‚’ç°¡å˜ã«æ‰“ã¦ã‚‹ä¾¿åˆ©ãªã‚„ã¤
 (depends-on "smartchr" :git "https://github.com/imakado/emacs-smartchr.git")
 
-;; ¸«¤¿ÌÜ
+;; è¦‹ãŸç›®é–¢ä¿‚
 (depends-on "color-theme")
 (depends-on "color-theme-solarized")
 (depends-on "powerline")
