@@ -16,5 +16,12 @@
 (add-hook 'yatex-mode-hook
           '(lambda ()
              (progn
-               (local-set-key (kbd "F") (smartchr '("F" "\\begin{figure}")))
+               (local-set-key (kbd "F") (smartchr '("F" "
+\\begin{figure}[hbtp]
+ \\centering
+ \\includegraphics[scale=0.2]{}
+ \\caption{}
+ \\label{fig:}
+\\end{figure}
+               ")))
                )))
