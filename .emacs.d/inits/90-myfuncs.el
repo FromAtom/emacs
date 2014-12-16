@@ -1,4 +1,4 @@
-;;window¤òÎÉ¤¤´¶¤¸¤ËÊ¬³ä
+;;windowã‚’è‰¯ã„æ„Ÿã˜ã«åˆ†å‰²
 (defun split-window-vertically-n (num_wins)
   (interactive "p")
   (if (= num_wins 2)

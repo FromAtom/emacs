@@ -1,4 +1,4 @@
-;; ¥µ¥Ö¥Ç¥£¥ì¥¯¥È¥êÆÉ¤ß¹ş¤ß´Ø¿ô
+;; ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªèª­ã¿è¾¼ã¿é–¢æ•°
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
@@ -8,7 +8,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-;; ¥µ¥Ö¥Ç¥£¥ì¥¯¥È¥ê¤Ë¥Ñ¥¹¤òÄÌ¤¹
+;; ã‚µãƒ–ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ãƒ‘ã‚¹ã‚’é€šã™
 (add-to-load-path "elisp")
 ; (add-to-load-path "conf")
 ; (add-to-load-path "public_repos")

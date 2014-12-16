@@ -1,4 +1,4 @@
-;; YaTeX¤ÎÆÉ¹ş¤ÈÀßÄê
+;; YaTeXã®èª­è¾¼ã¨è¨­å®š
 (setq auto-mode-alist
       (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
@@ -15,18 +15,18 @@
     ("ghostview\\|gv" . ".ps")
     ("acroread\\|pdf\\|Preview\\|TeXShop" . ".pdf")))
 
-;; ¥Ğ¥Ã¥Õ¥¡Á´ÂÎ¤Î¶çÆÉÅÀ¤ÈÆÉÅÀ¤ò¥³¥ó¥Ş¤È¥Ô¥ê¥ª¥É¤ËÊÑ´¹
+;; ãƒãƒƒãƒ•ã‚¡å…¨ä½“ã®å¥èª­ç‚¹ã¨èª­ç‚¹ã‚’ã‚³ãƒ³ãƒã¨ãƒ”ãƒªã‚ªãƒ‰ã«å¤‰æ›
 (defun replace-commaperiod-buffer ()
   (interactive "r")
   (save-excursion
-    (replace-string "¡¢" "¡¤" nil (point-min) (point-max))
-    (replace-string "¡£" "¡¥" nil (point-min) (point-max))))
+    (replace-string "ã€" "ï¼Œ" nil (point-min) (point-max))
+    (replace-string "ã€‚" "ï¼" nil (point-min) (point-max))))
 
-;; ÁªÂòÈÏ°ÏÆâ¤ÎÁ´³Ñ±Ñ¿ô»ú¤òÈ¾³Ñ±Ñ¿ô»ú¤ËÊÑ´¹
+;; é¸æŠç¯„å›²å†…ã®å…¨è§’è‹±æ•°å­—ã‚’åŠè§’è‹±æ•°å­—ã«å¤‰æ›
 (defun hankaku-eisuu-region (start end)
   (interactive "r")
   (while (string-match
-          "[£°-£¹£Á-£Ú£á-£ú]+"
+          "[ï¼-ï¼™ï¼¡-ï¼ºï½-ï½š]+"
           (buffer-substring start end))
     (save-excursion
       (japanese-hankaku-region
@@ -34,12 +34,12 @@
        (+ start (match-end 0))
        ))))
 
-;; ¥Ğ¥Ã¥Õ¥¡Á´ÂÎ¤ÎÁ´³Ñ±Ñ¿ô»ú¤òÈ¾³Ñ±Ñ¿ô»ú¤ËÊÑ´¹
+;; ãƒãƒƒãƒ•ã‚¡å…¨ä½“ã®å…¨è§’è‹±æ•°å­—ã‚’åŠè§’è‹±æ•°å­—ã«å¤‰æ›
 (defun hankaku-eisuu-buffer ()
   (interactive)
   (hankaku-eisuu-region (point-min) (point-max)))
 
-;; YaTeX¥â¡¼¥É¤Î»ş¤Ë¤Î¤ßÆ°ºî¤µ¤»¤ëÍÑ¤Ë¾ò·ïÊ¬´ô
+;; YaTeXãƒ¢ãƒ¼ãƒ‰ã®æ™‚ã«ã®ã¿å‹•ä½œã•ã›ã‚‹ç”¨ã«æ¡ä»¶åˆ†å²
 (defun replace-commaperiod-before-save-if-needed ()
   (when (memq major-mode
               '(yatex-mode))
@@ -47,7 +47,7 @@
 
 (add-hook 'before-save-hook 'replace-commaperiod-before-save-if-needed)
 
-;; ¥¹¥Ú¥ë¥Á¥§¥Ã¥¯¤òÁö¤é¤»¤ë
+;; ã‚¹ãƒšãƒ«ãƒã‚§ãƒƒã‚¯ã‚’èµ°ã‚‰ã›ã‚‹
 (mapc
  (lambda (hook)(add-hook hook '(lambda () (flyspell-mode 1))))
  '(yatex-mode-hook))

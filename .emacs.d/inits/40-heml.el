@@ -1,3 +1,4 @@
+;; 選択した単語をそのまま検索できるようにする
 (require 'helm)
 (require 'helm-config)
 

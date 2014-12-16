@@ -1,4 +1,4 @@
-;; auto-complete
+;; auto-complete用の設定
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
 (ac-config-default)

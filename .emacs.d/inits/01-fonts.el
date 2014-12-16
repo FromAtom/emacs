@@ -1,13 +1,13 @@
-;; ±Ñ¸ìFont¤ÎÀßÄê
+;; è‹±èªFontã®è¨­å®š
 (set-face-attribute 'default nil
                     :family "Ricty"
                     :height 140)
 
-;; ÆüËÜ¸ìFont¤ÎÀßÄê
+;; æ—¥æœ¬èªFontã®è¨­å®š
 (set-fontset-font
  nil 'japanese-jisx0208
  (font-spec :family "Ricty"))
 
-;; °ã¤¦¥Õ¥©¥ó¥È¤ò»È¤¦¤Ê¤é²£ÉıÄ´À°¤¬É¬Í×
+;; é•ã†ãƒ•ã‚©ãƒ³ãƒˆã‚’ä½¿ã†ãªã‚‰æ¨ªå¹…èª¿æ•´ãŒå¿…è¦
 '(setq face-font-rescale-alist
       '((".*Migu 1M.*" . 1.2)))

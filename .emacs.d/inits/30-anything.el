@@ -1,4 +1,4 @@
-;; anything.el
+;; anything.el用の設定
 (require 'anything)
 (require 'anything-config)
 (add-to-list 'anything-sources 'anything-c-source-emacs-commands)

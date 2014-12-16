@@ -1,3 +1,4 @@
+;; popup-win用の設定
 (setq pop-up-windows nil)
 (require 'popwin nil t)
 (when (require 'popwin nil t)
